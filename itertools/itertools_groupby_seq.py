@@ -49,5 +49,10 @@ print()
 # Group the sorted data based on X values
 print('Grouped, sorted:')
 for k, g in groupby(data, operator.attrgetter('x')):
-    print(k, list(g))
+    # print(k, *map(operator.attrgetter('y'), g))
+    # print(k, list(g))
+    print(k, list(map(operator.attrgetter('y'), g)))
+    # 0 [0, 3, 6]
+    # 1 [1, 4]
+    # 2 [2, 5]
 print()
